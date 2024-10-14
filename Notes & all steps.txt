@@ -1,0 +1,40 @@
+14/10/2024
+	Step 1:
+		Created a repo in GitHub
+		Created a folder in local 
+		Opened the folder in vs code and created a venv and activated
+		In terminal - CREATING A EMPTY GIT repo USING - (git init) command   ( As per the GitHub instructions)
+		Create a readme.md file in the folder -- add some content  adding this readme.md file in git repo by ( git add README.MD)
+		commiting the changes - git commit -m "my first commit"
+		Adding the GitHub commands provided by git 
+		AT last to push to files to the repo adding the push command 
+		Before this we need to give command git configurations
+		i.e user name and user email (if we are pushing it for the 1st time)
+		Next create .gitignore file in GitHub select language AS PYTHON
+	Step 2:
+	       Creating setup.py and requirements.txt files in local
+	ABOUT SETUP.PY
+		THIS FILE IS USED TO CONVERT OUT PORJECT TO A PACKAGE , We can use this package later on where ever needed.
+	
+step3:
+	Create a src folder -> create a __init__.py 
+	if we want to found this src folder as a package we should have a file called __init__.py
+	whenever this setup.py find_packages will run it will go and see in how many folders there is __init.py__ files are present so directly it considers this src folder as a package and try to build __init__.py. Once the build is over we can use this as a package 
+	Our entire project code will be on this folder (src)
+
+step4:
+	create Def get_requirements()in setup.py
+	This function is to automate and collect the packages used in requirements.txt 
+	NOTE:
+		WE WILL WRITE "-e ." in REQ.TXT TO TRIGGER THE SETUP.PY FILE 
+	THIS func return the list of requirements and pass it to the install_requires parameter
+	this func will extract the packages by getting the file path as arg and use readlines() to read each line while using this function it will create a "\n" str in each line so we need to remove this and also handle the '-e ." so that this shouldn't include in the returing list 
+	
+
+
+
+
+
+
+
+		
