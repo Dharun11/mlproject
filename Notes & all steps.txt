@@ -30,6 +30,31 @@ step4:
 	THIS func return the list of requirements and pass it to the install_requires parameter
 	this func will extract the packages by getting the file path as arg and use readlines() to read each line while using this function it will create a "\n" str in each line so we need to remove this and also handle the '-e ." so that this shouldn't include in the returing list 
 	
+step 5:
+	Once we run pip install -r requirements.txt
+	It will automatically triggers setup.py and installs and it will create a package name "mlproject.egg-info"
+	THEN WE COMMIT THE CHANGES TO THE GIT BY 	git add .
+	Commiting the changes - git commit -m "setup nd req"
+	Pushing the files to the repo -- git push -u origin main
+
+	STEP6:
+	NOTE:
+		ANY FOLDER WE CREATE THERE SHOULD BE __INIT__.PY FILE
+		CREATING PROJECT STRUCTURE
+		CREATE COMPONENTS FOLDER
+			ADD __INIT__PY
+			ADD DATA_INGESTION.PY
+			ADD DATA_TRANSFORMATION.PY
+			ADD MODEL_TRAIN.PY
+		CREATE  PIPELINE FOLDER
+			ADD PREDICT_PIPELINE.PY
+			ADD TRAIN_PIPELINE.PY
+		THESE PIPELINE FILES TRIGGER THE COMPONENTS 
+
+		AT LAST CREATE COMMON FILES SUCH AS 
+			LOGGER.PY
+			UTILS.PY ( HERE WE HAVE THE COMMON FUNCTIONS)
+			EXCEPTION.PY
 
 
 
