@@ -1,4 +1,7 @@
-14/10/2024
+					✅💕PROJECT END TO END ML STUDENT MARK PREDICTOR
+
+
+❤️14/10/2024
 	Step 1:
 		Created a repo in GitHub
 		Created a folder in local 
@@ -37,7 +40,7 @@ step 5:
 	Commiting the changes - git commit -m "setup nd req"
 	Pushing the files to the repo -- git push -u origin main
 
-	STEP6:
+	STEP6:  PROJECT STRUCTURE
 	NOTE:
 		ANY FOLDER WE CREATE THERE SHOULD BE __INIT__.PY FILE
 		CREATING PROJECT STRUCTURE
@@ -55,6 +58,29 @@ step 5:
 			LOGGER.PY
 			UTILS.PY ( HERE WE HAVE THE COMMON FUNCTIONS)
 			EXCEPTION.PY
+	STEP 7:
+		WRITE CODE FOR LOGG AND EXCEPTION
+	
+❤️15/10/2024-
+	Worked on the  data preprocessing EDA 
+❤️16/10/2024
+	We are using regression models because the scores are in regression
+
+
+	Working on model trainer.ipynb 
+	Here we are assumed to predict the math score of the student 
+	SO x (Independent features) are except math_Score column
+	Y (dependent features) are math_score column
+	NOTE:
+		we have to encode the data 
+		We use ONEHOTENCODING  for the less number of features dataset 
+		We use TARGETEDENCODING for the dataset which has large number of features 
+		We use STANDARDSCALAR for the numerical features
+		ONEHOTENCODING for the categorical features
+	Creating a pre processor pipeline for encoding in which first ONEHOTENCODING takes place followed by STANDARDSCALAR
+
+		
+
 
 
 

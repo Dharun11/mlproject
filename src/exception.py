@@ -1,4 +1,5 @@
-import sys,logging
+import sys
+from src.logger import logging
 
 
 # Whenever error raises we will call this func
@@ -27,7 +28,9 @@ if __name__=="__main__":
  
         logging.info("this is exception log divude by zero")
         raise CustomException(e,sys)
-'''    
+ 
+'''
+
     
 
     
