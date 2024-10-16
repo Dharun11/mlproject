@@ -78,12 +78,23 @@ step 5:
 		We use STANDARDSCALAR for the numerical features
 		ONEHOTENCODING for the categorical features
 	Creating a pre processor pipeline for encoding in which first ONEHOTENCODING takes place followed by STANDARDSCALAR
-
-		
-
+		We use COLUMNTRANSFORMERS these are responsible for transforming your column datas
 
 
+	DATAINGESTION.PY
+		❌ We have been using DATACLASS decorator imp interview question why it has used.
+	DATATRASNFORMATION.PY
+		❌what is the diff between fit_transform and transform (interview question)
+			✅fit is used for learning the parameters from the data, but it does not alter the data.
+			✅transform only applies the learned parameters to the data, and it can only be used after fit.
+			✅fit_transform is convenient when you want to both learn from and transform the data in a single step.
+		❌what is the use of NP.C_   (interview question)
 
+			✅In NumPy, np.c_ is a shorthand for column-wise concatenation, and it’s often used to stack 1-D arrays as 					columns into a 2-D array.
+			✅Key Features of np.c_
+				Column-wise Stacking: It takes multiple arrays and stacks them as columns in a 2-D array.
+				Array Creation: It’s useful for quickly creating 2-D arrays, especially when you need to combine multiple 				arrays.
+				Handling 1-D Arrays: If you pass 1-D arrays, np.c_ automatically converts them to 2-D, where each array 				becomes a colum
 
 
 
