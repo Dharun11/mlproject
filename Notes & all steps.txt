@@ -94,7 +94,9 @@ step 5:
 			✅Key Features of np.c_
 				Column-wise Stacking: It takes multiple arrays and stacks them as columns in a 2-D array.
 				Array Creation: It’s useful for quickly creating 2-D arrays, especially when you need to combine multiple 				arrays.
-				Handling 1-D Arrays: If you pass 1-D arrays, np.c_ automatically converts them to 2-D, where each array 				becomes a colum
+				Handling 1-D Arrays: If you pass 1-D arrays, np.c_ automatically converts them to 2-D, where each array 				becomes a column
+
+
 
 
 

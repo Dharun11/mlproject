@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass  # you will be able to directly define your  class variables 
 
 from src.components.data_transformation import DataTransformation,DataTransformationConfig
+from src.components.model_trainer import ModelTrainerConfig,ModelTrainer
 '''
 when the class only haves the variables then we can use dataclass or else it is better to use init if it contains
 functions and var
@@ -66,4 +67,7 @@ if __name__=='__main__':
     obj=DataIngestion()
     train_data,test_data=obj.initiate_data_ingestion()
     obj2=DataTransformation()
-    obj2.intiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,filepath=obj2.intiate_data_transformation(train_data,test_data)
+    obj3=ModelTrainer()
+    res=obj3.initiate_model_trainer(train_arr,test_arr)
+    print(res)

@@ -88,7 +88,7 @@ class DataTransformation:
             target_feature_test_df=test_df[target_column_name]  #y_test
             
             input_feature_train_arr=preprocess_obj.fit_transform(input_feature_train_df)
-            input_feature_test_arr=preprocess_obj.fit_transform(input_feature_test_df)
+            input_feature_test_arr=preprocess_obj.transform(input_feature_test_df)
             
             
             # np.c_ is the column wise concatenation    
