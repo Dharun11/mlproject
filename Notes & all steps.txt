@@ -96,6 +96,14 @@ step 5:
 				Array Creation: It’s useful for quickly creating 2-D arrays, especially when you need to combine multiple 				arrays.
 				Handling 1-D Arrays: If you pass 1-D arrays, np.c_ automatically converts them to 2-D, where each array 				becomes a column
 
+17/10/2024
+	MODEL TRAINER.PY
+		Importing all the required modules
+
+18/10/2024
+	Studying about the dockers series  
+
+
 
 
 

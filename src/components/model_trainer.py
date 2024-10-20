@@ -52,16 +52,71 @@ class ModelTrainer:
                     "GradientBoostRegressor": GradientBoostingRegressor(),
                     "RandomForestRegressor" : RandomForestRegressor(),
                     "AdaBoostRegressor": AdaBoostRegressor(),
-                    "k-Neighbour Regressor":KNeighborsRegressor(),
+                    "KNeighborRegressor":KNeighborsRegressor(),
                     "Lasso":Lasso(),
                     "Ridge":Ridge(),
                     "XGBRegressor": XGBRegressor(),
                     "CatBoostRegressor":CatBoostRegressor(verbose=False)
                     
                 }
+            params={
+                "DecisionTreeRegressor": {
+                    'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                    # 'splitter':['best','random'],
+                    # 'max_features':['sqrt','log2'],
+                },
+                "RandomForestRegressor":{
+                    # 'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                 
+                    # 'max_features':['sqrt','log2',None],
+                    'n_estimators': [8,16,32,64,128,256]
+                },
+                "GradientBoostRegressor":{
+                    # 'loss':['squared_error', 'huber', 'absolute_error', 'quantile'],
+                    'learning_rate':[.1,.01,.05,.001],
+                    'subsample':[0.6,0.7,0.75,0.8,0.85,0.9],
+                    # 'criterion':['squared_error', 'friedman_mse'],
+                    # 'max_features':['auto','sqrt','log2'],
+                    'n_estimators': [8,16,32,64,128,256]
+                },
+                "LinearRegression":{},
+                "XGBRegressor":{
+                    'learning_rate':[.1,.01,.05,.001],
+                    'n_estimators': [8,16,32,64,128,256]
+                },
+                "CatBoostRegressor":{
+                    'depth': [6,8,10],
+                    'learning_rate': [0.01, 0.05, 0.1],
+                    'iterations': [30, 50, 100]
+                },
+                "Lasso": {
+                    'alpha': [0.1, 0.01, 0.001, 1, 10, 100],
+                    'max_iter': [1000, 2000, 3000],
+                    'tol': [0.0001, 0.00001, 0.000001]
+                },
+
+                "Ridge": {
+                    'alpha': [0.1, 0.01, 0.001, 1, 10, 100],
+                    'solver': ['auto', 'svd', 'cholesky', 'lsqr', 'sag', 'saga'],
+                    'max_iter': [None, 1000, 2000]
+                },
+
+                "KNeighborRegressor": {
+                    'n_neighbors': [3, 5, 7, 9, 11],
+                    'weights': ['uniform', 'distance'],
+                    'algorithm': ['auto', 'ball_tree', 'kd_tree', 'brute'],
+                    'p': [1, 2]  # 1 for Manhattan distance, 2 for Euclidean distance
+                },
+                "AdaBoostRegressor":{
+                    'learning_rate':[.1,.01,0.5,.001],
+                    # 'loss':['linear','square','exponential'],
+                    'n_estimators': [8,16,32,64,128,256]
+                }
+                
+            }
                    
             model_report:dict=evaluate_model(x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test,
-                                             models=models) 
+                                             models=models,param=params) 
             
             ## to get the best model from dict
             best_model_score=max(sorted(model_report.values()))
