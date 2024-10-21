@@ -101,7 +101,17 @@ step 5:
 		Importing all the required modules
 
 18/10/2024
-	Studying about the dockers series  
+	Studying about the dockers series 
+20/10/2024
+		WE ARE CREATING A PREDICTION PIPELINE 
+	✅ 1st we have to create app.py and we have to use FLASK for api calling ui 
+	✅ Create a 'templates' folder and create the necessary frontend .html files 
+		✅ Write the code for home.html here we create a form for all the input variables
+	✅ Create a custom class in prediction pipeline.py and write the code for it 
+		✅ Here we get all the independent features 
+		✅ write a function to convert the input features into a dataframe
+		✅ 
+
 
 
 
