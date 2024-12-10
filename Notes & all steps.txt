@@ -112,6 +112,21 @@ step 5:
 		✅ write a function to convert the input features into a dataframe
 		✅ 
 
+10/12/2024
+	Modified the flask app.
+	The key change is inside the html files you have to give (url_for("The function name which is present in app.py"))
+	Then only it will work perfectly
+	to run the app. - python app.py
+	in browser go for https://127.0.0.1:5000/ 
+
+AWS BEANSTALK
+	To deploy in this paas
+	Step1:
+		You have to create .ebextension file -> python.config -> Strictly follow the format refer file
+	Step2:
+		For deployment purpose create a application.py file which is correlated to step1 - copy paste the app.py in this
+		
+
 
 
 
